@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Styled Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="banner">
+        <img src="amazonLogo.png" alt="Amazon Logo" class="logo">
+    </div>
+    <div class="content">
+        <img src="picture.jpeg" alt="Picture of Dia" class="dia-image">
+        <div class="info">
+            <h1>Dia's Name</h1>
+            <p id="date-time"></p>
+        </div>
+    </div>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const dateTimeString = now.toLocaleString();
+            document.getElementById('date-time').innerText = dateTimeString;
+        }
+
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+    </script>
+</body>
+</html>
+
